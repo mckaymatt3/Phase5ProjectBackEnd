@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
   
   #create access to routes for rooms
-  resources :rooms
+  resources :rooms do
+    resources :messages
+  end
   
   # changed from get pages/home to root pages#home
   root 'pages#home'
